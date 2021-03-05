@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     if user.save
       session[:user_id] = user.id
       flash[:notice] = "Account creation success"
-      redirect_to welcome_homepage
+      redirect_to welcome_homepage_url
     else
       flash[:notice] = "Account creation failed"
       redirect_to '/users/new'
